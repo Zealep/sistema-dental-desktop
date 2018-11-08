@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.2.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RptFichaPagos" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="042c7b26-a185-4971-811c-60287e9a391c">
+	<parameter name="logo" class="java.io.InputStream"/>
+	<parameter name="apellidos" class="java.lang.String"/>
+	<parameter name="nombres" class="java.lang.String"/>
+	<parameter name="nroHistoria" class="java.lang.String"/>
+	<parameter name="dni" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="fechaPagar" class="java.lang.String"/>
+	<field name="fechaPago" class="java.lang.String"/>
+	<field name="nroCuota" class="java.lang.String"/>
+	<field name="estado" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="51" splitType="Stretch">
+			<image>
+				<reportElement stretchType="RelativeToBandHeight" x="441" y="-15" width="59" height="51" uuid="a3dfb15d-20a2-46f0-b4a9-0482804b6390"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="123" y="-13" width="311" height="30" forecolor="#0F4C8C" uuid="75fc9a3c-756a-46f7-b8b6-b0a2b357cc2b"/>
+				<textElement>
+					<font fontName="Lucida Calligraphy" size="20" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Clinica Dental Diamante]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="158" y="15" width="230" height="22" forecolor="#0F4C8C" uuid="69e28f60-d5b8-440d-8a8e-acb850d136ca"/>
+				<textElement>
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<text><![CDATA[El mejor lugar para la mejor sonrisa]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="84" splitType="Stretch">
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="166" y="0" width="220" height="20" forecolor="#0F4C8C" uuid="18d69719-748f-4873-8255-3a82d1a13b0c"/>
+				<textElement>
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ficha de Pagos del Paciente]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="53" y="26" width="490" height="46" uuid="306053a3-3c2d-4923-b2a4-6e462ffe6d60"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="64" y="28" width="55" height="20" uuid="a3d55111-e8ee-48e3-9ab9-2cef7ff2068a"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Apellidos :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="64" y="52" width="55" height="20" uuid="b3e14499-4dfa-4c0c-93da-a97e30fba809"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombres :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="346" y="27" width="70" height="20" uuid="82e23555-393d-40dd-adc3-e02a433d013c"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nro Historia :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="120" y="30" width="170" height="16" uuid="ff75297c-94d9-4621-91ea-78a9ee019e6c"/>
+				<textFieldExpression><![CDATA[$P{apellidos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="119" y="52" width="171" height="14" uuid="f3854702-7ea9-4710-9961-92d1f7edb126"/>
+				<textFieldExpression><![CDATA[$P{nombres}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="419" y="28" width="100" height="20" uuid="888f0f31-07c7-494d-89dd-41190a20c8f6"/>
+				<textFieldExpression><![CDATA[$P{nroHistoria}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="386" y="46" width="28" height="20" uuid="a2888019-85f2-45f4-9f6a-20bfc7a18b1e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dni :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="419" y="46" width="100" height="20" uuid="ed14513a-7f2b-48a5-949d-3551b57b0746"/>
+				<textFieldExpression><![CDATA[$P{dni}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="46" splitType="Stretch">
+			<rectangle>
+				<reportElement x="10" y="17" width="160" height="28" forecolor="#161C73" uuid="f923c45f-ac3e-42a4-ab3b-6e39b0f429c6"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="170" y="17" width="160" height="28" forecolor="#161C73" uuid="07fad2ed-1312-49c3-882c-f18f5b832544"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="330" y="17" width="110" height="28" forecolor="#161C73" uuid="d6acc406-9478-4980-a4a7-1b2f97ce8fa0"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="440" y="17" width="120" height="28" forecolor="#161C73" uuid="65a5cfb1-2746-4485-b2b4-5fdecf3f503f"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="30" y="21" width="100" height="16" uuid="d66b19c9-b3b3-44f2-9415-9ac678429c58"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[FECHA PAGAR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="21" width="100" height="16" uuid="ac991637-af58-4e16-92c9-14aaee7a992a"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[FECHA DE PAGO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="335" y="21" width="100" height="16" uuid="8d3cc918-c916-4e61-9d75-eab9519133de"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[N° CUOTA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="450" y="23" width="100" height="16" uuid="05d5c8d3-bd33-464c-9d83-516102f0371a"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ESTADO]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<rectangle>
+				<reportElement x="10" y="0" width="160" height="21" forecolor="#0A2DF2" uuid="f06befe7-1bd0-41ca-8de5-8a92a5378674"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="170" y="0" width="160" height="21" forecolor="#0A2DF2" uuid="5449146d-22a5-44c1-acec-ef3a9a5bd70c"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="330" y="0" width="110" height="21" forecolor="#0A2DF2" uuid="3055499c-ca7f-4fc8-895f-c7bbf8787d9b"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="440" y="-1" width="120" height="22" forecolor="#0A2DF2" uuid="006e66ce-d31f-4a60-a357-60bbe6781369"/>
+			</rectangle>
+			<textField>
+				<reportElement x="20" y="4" width="150" height="13" uuid="1483c99f-07b4-491c-932d-3f6e38ea8936">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8bfba2c0-f18b-4acd-bed5-e91108f18535"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fechaPagar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="3" width="150" height="14" uuid="bb86e919-e066-4ed5-9153-10e08f416d1d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="be28cfe0-9e15-42b7-81c3-6c1999a4ac9b"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fechaPago}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="341" y="3" width="94" height="14" uuid="4f61d9c8-1c6e-44a5-82ed-58ba69e1b8f5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="60e3dbb0-2cc2-4cc6-b358-8af3f450171e"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nroCuota}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="452" y="2" width="100" height="16" uuid="4caa0e1b-96f1-4c41-ada5-3d334a6ae409">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="df7ff9aa-e59a-48fc-a159-016e83160395"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{estado}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
